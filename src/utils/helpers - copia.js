@@ -9,12 +9,10 @@ export function fmtM(v) {
 }
 
 export function parse(s) {
-  if (!s && s !== 0) return 0;
-  let str = String(s).trim();
-  // Reemplaza coma decimal por punto (formato español → estándar)
-  str = str.replace(',', '.');
-  const num = parseFloat(str);
-  return isNaN(num) ? 0 : num;
+  if (!s && s !== 0) return 0
+  const clean = String(s).replace(/\./g, '').replace(',', '.')
+  const n = parseFloat(clean)
+  return isNaN(n) ? 0 : n
 }
 
 export function pct(part, total) {
