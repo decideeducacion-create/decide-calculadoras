@@ -5,6 +5,7 @@ import Fragilidad from './calculadoras/Fragilidad'
 import Libertad  from './calculadoras/Libertad'
 import Umbral    from './calculadoras/Umbral'
 import Balance   from './calculadoras/Balance'
+import Landing   from './pages/Landing'   // 👈 Agregar esta línea
 import { t }     from './theme'
 
 function NotFound() {
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/"           element={<Landing />}      />  {/* 👈 Nueva ruta para la raíz */}
         <Route path="/auditoria"  element={<Auditoria  />} />
         <Route path="/rvn"        element={<RVN        />} />
         <Route path="/fragilidad" element={<Fragilidad />} />
