@@ -17,8 +17,16 @@
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.02);
   margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s ease-in-out; /* Suaviza el efecto */
+  box-shadow: 0 0 0 rgba(255, 215, 0, 0); /* Sin resplandor inicial */
+}
+
+.portada:hover {
+  box-shadow: 0 0 30px 10px rgba(255, 215, 0, 1); /* Dorado esfumado */
+  /* Puedes ajustar los valores: 
+     0 0 20px 10px -> 20px de desenfoque, 10px de expansión
+     rgba(255, 215, 0, 0.6) -> Dorado con 60% de opacidad */
 }
 
 .frase {
